@@ -29,4 +29,4 @@ spec:
       pattern:
         spec:
           containers:
-          - image: "eu.foo.io/* | bar.io/*"
+          - image: "ghcr.io/* | aws.com/*"
