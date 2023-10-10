@@ -22,7 +22,7 @@ spec:
             kinds:
               - Pod
       validate:
-        message: Privileged ports should not be used.
+        message: Privileged ports should not be used. (CCI-0017620)
         pattern:
           spec:
             containers:

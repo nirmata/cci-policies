@@ -25,7 +25,7 @@ spec:
           kinds:
           - Pod
     validate:
-      message: "Root filesystem must be read-only."
+      message: "Root filesystem must be read-only. (CCI-001813)"
       pattern:
         spec:
           containers:

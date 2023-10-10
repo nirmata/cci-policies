@@ -25,7 +25,7 @@ spec:
           kinds:
           - Pod
     validate:
-      message: "Unknown image registry."
+      message: "Unknown image registry. A trusted image registry should be used. (CCI-000185)" 
       pattern:
         spec:
           containers:

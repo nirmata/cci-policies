@@ -25,7 +25,7 @@ spec:
                 - Pod
       validate:
         message: >-
-          Privileged mode is disallowed.
+          Privileged mode is disallowed. (CCI-002235)
         pattern:
           spec:
             =(ephemeralContainers):

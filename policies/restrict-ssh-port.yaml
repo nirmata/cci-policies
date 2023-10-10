@@ -22,7 +22,7 @@ spec:
             kinds:
               - Pod
       validate:
-        message: SSH port is not allowed.
+        message: "SSH port is not allowed. (CCI-000381)"
         pattern:
           spec:
             containers:

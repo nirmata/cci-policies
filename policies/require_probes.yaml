@@ -27,7 +27,7 @@ spec:
           kinds:
           - Pod
     validate:
-      message: "Liveness, readiness, or startup probes are required for all containers."
+      message: "Liveness, readiness, or startup probes are required for all containers. (CCI-002385)"
       foreach:
       - list: request.object.spec.containers[]
         deny:

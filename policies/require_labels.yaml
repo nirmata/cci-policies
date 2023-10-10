@@ -22,7 +22,7 @@ spec:
         kinds:
         - Pod
     validate:
-      message: "The label `app.kubernetes.io/name` is required."
+      message: "The label `app.kubernetes.io/name` is required. (CCI-002530)" 
       pattern:
         metadata:
           labels:

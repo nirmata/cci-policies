@@ -26,7 +26,7 @@ spec:
           kinds:
           - Pod
     validate:
-      message: "CPU and memory resource requests and limits are required."
+      message: "CPU and memory resource requests and limits are required. (CCI-001094, CCI-001095)"
       pattern:
         spec:
           containers:
