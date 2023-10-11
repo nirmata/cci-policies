@@ -1,0 +1,26 @@
+apiVersion: json.kyverno.io/v1alpha1
+kind: Policy
+metadata:
+  name: check-external-calls
+spec:
+  rules:
+    - name: check-external-calls
+      validate:
+        assert:
+          all:
+          - message: "HTTP(S) calls are not allowed (CCI-000381)"
+            check:
+              ~.(Stages[].Commands[].Args[].Value):
+                (contains(@, 'https://') || contains(@, 'http://')): false
+          - message: "HTTP calls are not allowed"
+            check:
+              ~.(Stages[].Commands[].CmdLine[]):
+                (contains(@, 'https://') || contains(@, 'http://')): false
+          - message: "curl is not allowed"
+            check:
+              ~.(Stages[].Commands[].CmdLine[]):
+                (contains(@, 'curl')): false
+          - message: "wget is not allowed"
+            check:
+              ~.(Stages[].Commands[].CmdLine[]):
+                (contains(@, 'wget')): false
