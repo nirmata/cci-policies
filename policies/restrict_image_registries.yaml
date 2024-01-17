@@ -24,6 +24,16 @@ spec:
       - resources:
           kinds:
           - Pod
+      exclude:
+        any:
+        - resources:
+            kinds:
+              - Pod
+            namespaces:
+              - nirmata
+              - nirmata-system
+              - kube-system
+              - kyverno          
     validate:
       message: "Unknown image registry. A trusted image registry should be used. (CCI-000185)" 
       pattern:

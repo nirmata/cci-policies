@@ -23,6 +23,16 @@ spec:
           - resources:
               kinds:
                 - Pod
+      exclude:
+        any:
+        - resources:
+            kinds:
+              - Pod
+            namespaces:
+              - nirmata
+              - nirmata-system
+              - kube-system
+              - kyverno                
       validate:
         message: >-
           Privileged mode is disallowed. (CCI-002235)

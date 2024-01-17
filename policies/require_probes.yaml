@@ -26,6 +26,16 @@ spec:
       - resources:
           kinds:
           - Pod
+      exclude:
+        any:
+        - resources:
+            kinds:
+              - Pod
+            namespaces:
+              - nirmata
+              - nirmata-system
+              - kube-system
+              - kyverno          
     validate:
       message: "Liveness, readiness, or startup probes are required for all containers. (CCI-002385)"
       foreach:

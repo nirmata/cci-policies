@@ -24,6 +24,16 @@ spec:
       - resources:
           kinds:
           - Pod
+      exclude:
+        any:
+        - resources:
+            kinds:
+              - Pod
+            namespaces:
+              - nirmata
+              - nirmata-system
+              - kube-system
+              - kyverno          
     validate:
       message: "Root filesystem must be read-only. (CCI-001813)"
       pattern:

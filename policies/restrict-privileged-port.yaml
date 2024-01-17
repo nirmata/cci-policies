@@ -21,6 +21,16 @@ spec:
         - resources:
             kinds:
               - Pod
+      exclude:
+        any:
+        - resources:
+            kinds:
+              - Pod
+            namespaces:
+              - nirmata
+              - nirmata-system
+              - kube-system
+              - kyverno              
       validate:
         message: Privileged ports should not be used. (CCI-0017620)
         pattern:
