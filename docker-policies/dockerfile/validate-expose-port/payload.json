@@ -1,0 +1,3 @@
+ErrorHTTP: HTTP GET request https://nirmata.io/users/api/user?fields=+ancestors&query=%7B%22email%22%3A+%22vikash%40nirmata.com%22%7D
+caused by: Get "https://nirmata.io/users/api/user?fields=+ancestors&query=%7B%22email%22%3A+%22vikash%40nirmata.com%22%7D": net/http: TLS handshake timeout
+{"MetaArgs":null,"Stages":[{"Name":"","BaseName":"ubuntu:latest","Platform":"","Comment":"","SourceCode":"FROM ubuntu:latest","Location":[{"Start":{"Line":1,"Character":0},"End":{"Line":1,"Character":0}}],"From":{"Image":"ubuntu:latest"},"Commands":[{"Name":"EXPOSE","Ports":["8080"]}]}]}
